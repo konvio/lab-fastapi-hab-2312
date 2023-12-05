@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "lab-fastapi-hab-2312"
+version = "0.1.0"
+description = ""
+authors = ["Vitaliy Kononenko <konvio@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+azure-functions = "^1.17.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
