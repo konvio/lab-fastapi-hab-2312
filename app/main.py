@@ -1,21 +1,13 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
-from typing import Optional
 
-
-class Habit(BaseModel):
-    id: Optional[int] = None
-    name: str
-    start_date: str
-    end_date: str
-    status: str
-
+from app.model import Habit
 
 app = FastAPI()
 
 habits = []
 
-@app.get("/")
+
+@app.get("/hello")
 async def hello_world():
     return {"message": "Hello World"}
 
