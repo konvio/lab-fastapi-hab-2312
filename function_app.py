@@ -4,4 +4,3 @@ import json
 import logging
 
 app = func.FunctionApp()
-
