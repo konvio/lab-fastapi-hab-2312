@@ -15,6 +15,10 @@ app = FastAPI()
 
 habits = []
 
+@app.get("/")
+async def hello_world():
+    return {"message": "Hello World"}
+
 
 @app.post("/habits/")
 async def create_habit(habit: Habit):
