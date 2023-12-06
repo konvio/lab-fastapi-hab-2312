@@ -3,10 +3,10 @@ repos:
     rev: '1.7.0'
     hooks:
       - id: poetry-export
-        name: poetry export requirements.txt
+        name: export requirements.txt
         args: [ '-o', 'requirements.txt', '--without-hashes' ]
         files: poetry.lock
       - id: poetry-export
-        name: poetry export requirements-dev.txt
+        name: export requirements-dev.txt
         args: [ '-o', 'requirements-dev.txt', '--with=dev' , '--without-hashes' ]
         files: poetry.lock
