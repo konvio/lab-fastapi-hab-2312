@@ -7,9 +7,10 @@ app = FastAPI()
 habits = []
 
 
-@app.get("/hello")
-async def hello_world():
-    return {"message": "Hello World"}
+
+@app.get("/api/hello")
+async def hello_world(name: str):
+    return {"message": f"Hello {name}!"}
 
 
 @app.post("/habits/")
@@ -49,3 +50,9 @@ async def delete_habit(habit_id: int):
             habits.pop(index)
             return {"message": "Habit deleted"}
     return {"error": "Habit not found"}
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)
